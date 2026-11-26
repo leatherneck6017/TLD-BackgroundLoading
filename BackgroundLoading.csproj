@@ -37,6 +37,6 @@
 		</Reference>
 	</ItemGroup>
 
-	<Import Project="BuildActions.targets"/>
+	<Import Project="BuildActions.targets" />
 
 </Project>

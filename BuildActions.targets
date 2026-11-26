@@ -10,6 +10,6 @@
 		<Copy SourceFiles="$(TargetPath)" DestinationFolder="$(TLDPath)\Mods\" Retries="10" RetryDelayMilliseconds="500" />
 
 		<!-- 4. Relaunch via Steam -->
-		<!--<Exec Command="start &quot;&quot; &quot;steam://rungameid/305620&quot;" />-->
+		<Exec Command="start &quot;&quot; &quot;steam://rungameid/305620&quot;" />
 	</Target>
 </Project>

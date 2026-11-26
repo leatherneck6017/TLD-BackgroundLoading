@@ -34,7 +34,15 @@ Open Options > Mod Settings > Background Loading.
 - **Enabled** (default on): keep the game running in the background while it loads. Turn off to use the game's normal behavior.
 - **Keep running in background always** (default off): keep the game running whenever it is unfocused, not just while loading. Warning: during gameplay, time keeps passing (your survivor keeps getting colder and hungrier) and audio keeps playing while you are alt-tabbed.
 
+## Building from Source
+
+1. Clone or open the project in Visual Studio / .NET SDK targeting `net6.0`.
+2. Update `TLDPath` in `BackgroundLoading.csproj` to point to your The Long Dark installation directory (currently set to `E:\SteamLibrary\steamapps\common\TheLongDark`).
+3. Build the project so references from `$(TLDPath)\MelonLoader\net6\*.dll` and `$(TLDPath)\MelonLoader\Il2CppAssemblies\*.dll` resolve, along with `$(TLDPath)\Mods\ModSettings.dll`.
+4. On a successful build, `BuildActions.targets` copies `BackgroundLoading.dll` into your game's `Mods` folder automatically.
+
 ## Issues
+
 If you encounter any, please report them on the [GitHub Issues](https://github.com/leatherneck6017/TLD-BackgroundLoading/issues) page or contact me directly on the [TLD Modding Discord](https://discord.gg/tldmodding) (@leatherneck6017).
 
 ## AI Disclaimer
